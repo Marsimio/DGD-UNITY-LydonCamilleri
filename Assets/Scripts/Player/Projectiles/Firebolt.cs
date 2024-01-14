@@ -22,6 +22,7 @@ public class Firebolt : Projectile
             if (enemydamaged != null)
             {
                 enemydamaged.ApplyDamage(damage);
+                gameObject.SetActive(false);
             }
 
         }
