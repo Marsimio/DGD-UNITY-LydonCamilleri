@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1941344446061931602, guid: 032d51692753d71408732ded951e5312, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 2231237906456837160, guid: 032d51692753d71408732ded951e5312, type: 3}
       propertyPath: objectPool
       value: 
@@ -153,15 +157,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5031201101252719134, guid: 032d51692753d71408732ded951e5312, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5031201101252719134, guid: 032d51692753d71408732ded951e5312, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5031201101252719134, guid: 032d51692753d71408732ded951e5312, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5031201101252719134, guid: 032d51692753d71408732ded951e5312, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -179,6 +183,14 @@ PrefabInstance:
       propertyPath: objectPool
       value: 
       objectReference: {fileID: 502247301}
+    - target: {fileID: 5797931226705464657, guid: 032d51692753d71408732ded951e5312, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6872138912580332675, guid: 032d51692753d71408732ded951e5312, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 9146237193421445525, guid: 032d51692753d71408732ded951e5312, type: 3}
       propertyPath: m_Name
       value: Player
@@ -589,5 +601,5 @@ SceneRoots:
   - {fileID: 1547403554}
   - {fileID: 7627784814934617622}
   - {fileID: 43693335178825955}
-  - {fileID: 142214014}
   - {fileID: 2045624029}
+  - {fileID: 142214014}

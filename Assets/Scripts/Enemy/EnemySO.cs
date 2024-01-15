@@ -8,4 +8,6 @@ public class EnemySO : ScriptableObject
     public GameObject enemyprefab;
     public int damage;
     public int hp;
+    public int firerate;
+    public GameObject projectile;
 }

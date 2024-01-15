@@ -15,3 +15,5 @@ MonoBehaviour:
   enemyprefab: {fileID: 6793007177304009176, guid: d4ffb91df5dd06b4fac617745230af55, type: 3}
   damage: 2
   hp: 10
+  firerate: 1
+  projectile: {fileID: 1032151864232688737, guid: 7bdd59ace7dba8347b0a4b0284154617, type: 3}

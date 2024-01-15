@@ -16,7 +16,7 @@ public class EnemySpawner : MonoBehaviour
     {
         
         Vector3 roomPos = gameObject.transform.position;
-        int numSpawns = Random.Range(1, 4);
+        int numSpawns = Random.Range(1, GameData.Difficulty);
         Debug.Log("Spawning Goons " + numSpawns);
         for (int x = 0; x < numSpawns; x++)
         {
@@ -25,6 +25,8 @@ public class EnemySpawner : MonoBehaviour
             GameObject enemyInstance = Instantiate(enemyList[enemyChoice].enemyprefab, enemypos, Quaternion.identity);
             enemyInstance.GetComponent<Enemy>().start_hitpoints = enemyList[enemyChoice].hp;
             enemyInstance.GetComponent<Enemy>().start_strength = enemyList[enemyChoice].damage;
+            enemyInstance.GetComponent<Enemy>().start_firerate = enemyList[enemyChoice].firerate;
+            enemyInstance.GetComponent<Enemy>().start_projectile = enemyList[enemyChoice].projectile;
         }
     }
 

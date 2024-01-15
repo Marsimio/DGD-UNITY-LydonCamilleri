@@ -12,6 +12,7 @@ TagManager:
   - Bomb
   - Projectile
   - Enemy
+  - Target
   layers:
   - Default
   - TransparentFX
