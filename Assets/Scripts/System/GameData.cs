@@ -7,9 +7,10 @@ public abstract class GameData : MonoBehaviour
 
     private static Vector3 _mousePos;
     private static float _padding = 0f;
-    private static int _playerHealth = 10;
+    private static int _playerHealth = 20;
     private static int _score = 0;
-    private static int _difficulty = 3;
+    private static int _enemyCount;
+    private static int _enemyKills;
 
     public static int PlayerHealth
     {
@@ -23,13 +24,17 @@ public abstract class GameData : MonoBehaviour
         set { _score = value; }
     }
 
-    public static int Difficulty
+    public static int enemyCount
     {
-        get { return _difficulty; }
-        set { _difficulty = value; }
+        get { return _enemyCount; }
+        set { _enemyCount = value; }
     }
 
-
+    public static int enemyKills
+    {
+        get { return _enemyKills; }
+        set { _enemyKills = value; }
+    }
     public static Vector3 MousePos
 
     {

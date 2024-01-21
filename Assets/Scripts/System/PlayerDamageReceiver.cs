@@ -13,8 +13,10 @@ public class DamageReceiver : MonoBehaviour
         originalColor = spriteRenderer.color;
     }
 
-    public void ApplyDamage(float damage)
+    public void ApplyDamage(int damage)
     {
+        GameData.PlayerHealth -= damage;
+        GameManager.Instance.PlayerDamage();
         spriteRenderer.color = Color.red;
         StartCoroutine(ResetColor());
     }

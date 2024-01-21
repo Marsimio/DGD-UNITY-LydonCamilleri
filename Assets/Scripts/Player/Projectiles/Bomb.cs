@@ -22,6 +22,12 @@ public class Bomb : Projectile
             gameObject.SetActive(false);
         }
     }
+    private IEnumerator DelayedExplosion()
+    {
+        yield return new WaitForSeconds(explosionDelay);
+        Explode(radius);
+        gameObject.SetActive(false);
+    }
 
     void Explode(float range)
     {
@@ -51,10 +57,5 @@ public class Bomb : Projectile
         }
     }
 
-    private IEnumerator DelayedExplosion()
-    {
-        yield return new WaitForSeconds(explosionDelay);
-        Explode(radius);
-        gameObject.SetActive(false);
-    }
+
 }

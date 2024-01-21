@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Animator))]
 public class Scripts : MonoBehaviour
@@ -12,6 +13,7 @@ public class Scripts : MonoBehaviour
 
     private void Start()
     {
+        GameManager.Instance.findHP();
     }
 
 
@@ -42,6 +44,7 @@ public class Scripts : MonoBehaviour
             direction += Vector3.right;
         }
     }
+
 
     private void Movement()
     {

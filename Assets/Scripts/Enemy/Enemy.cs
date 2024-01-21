@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class Enemy : MonoBehaviour
 {
     public int start_hitpoints;
@@ -13,6 +14,7 @@ public class Enemy : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
     private Coroutine fireCoroutine;
+
 
     private void Awake()
     {
@@ -26,9 +28,7 @@ public class Enemy : MonoBehaviour
     {
         if (player != null)
         {
-            Vector3 direction = (player.transform.position - transform.position).normalized;
-            Quaternion rotation = Quaternion.LookRotation(direction);
-            gameObject.transform.rotation = rotation;
+
         }
     }
 
@@ -40,8 +40,8 @@ public class Enemy : MonoBehaviour
         if (start_hitpoints <= 0)
         {
             Destroy(gameObject);
+            GameManager.Instance.EnemyDefeated();
         }
-
     }
 
     private IEnumerator ResetColor()
@@ -74,19 +74,13 @@ public class Enemy : MonoBehaviour
     void Fire()
     {
         GameObject projectile = Instantiate(start_projectile, transform.position, Quaternion.identity);
-        Rigidbody2D projectileRB = projectile.GetComponent<Rigidbody2D>();
-        if (projectileRB != null)
-        {
-            Vector2 direction = player.transform.position - projectile.transform.position;
-            direction.Normalize();
 
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-            Quaternion rotation = Quaternion.Euler(new Vector3(0, 0, angle+90));
+        Vector3 direction = (player.transform.position - transform.position).normalized;
 
-            projectile.transform.rotation = rotation;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        projectile.transform.rotation = Quaternion.AngleAxis(angle+90, Vector3.forward);
 
-            projectileRB.AddForce(direction * 10, ForceMode2D.Impulse);
-
-        }
+        Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+        rb.velocity = direction * 10f;
     }
 }

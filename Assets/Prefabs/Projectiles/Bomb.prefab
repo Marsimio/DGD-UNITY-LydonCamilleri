@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  damage: 6
+  damage: 3
   particleSystemPrefab: {fileID: 1319349801619218310, guid: cb4ab92202422174086b8a5fa22e83b9, type: 3}
   radius: 1.35
   explosionDelay: 3
