@@ -24,14 +24,6 @@ public class Enemy : MonoBehaviour
         originalColor = spriteRenderer.color;
     }
 
-    private void FixedUpdate()
-    {
-        if (player != null)
-        {
-
-        }
-    }
-
     public void ApplyDamage(float damage)
     {
         spriteRenderer.color = Color.red;
@@ -40,7 +32,7 @@ public class Enemy : MonoBehaviour
         if (start_hitpoints <= 0)
         {
             Destroy(gameObject);
-            GameManager.Instance.EnemyDefeated();
+            GameManager.Instance.EnemyDefeated(); //Checks and adds defeated enemy to GameData
         }
     }
 
@@ -52,7 +44,7 @@ public class Enemy : MonoBehaviour
 
     private void OnBecameVisible()
     {
-        fireCoroutine = StartCoroutine(FireProjectile());
+        fireCoroutine = StartCoroutine(FireProjectile()); //starts firing towards player
     }
     private void OnBecameInvisible()
     {
@@ -77,8 +69,8 @@ public class Enemy : MonoBehaviour
 
         Vector3 direction = (player.transform.position - transform.position).normalized;
 
-        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        projectile.transform.rotation = Quaternion.AngleAxis(angle+90, Vector3.forward);
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; 
+        projectile.transform.rotation = Quaternion.AngleAxis(angle+90, Vector3.forward); //angles projectile towards target
 
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
         rb.velocity = direction * 10f;

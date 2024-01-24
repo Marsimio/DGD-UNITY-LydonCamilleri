@@ -10,7 +10,6 @@ public class GameManager : Singleton<GameManager>
     public Button easyButton, mediumButton, hardButton;
     public int Difficulty;
     public TextMeshProUGUI healthText;
-
     private int totalEnemies;
     private int enemiesDefeated;
 
@@ -23,10 +22,6 @@ public class GameManager : Singleton<GameManager>
 
     }
 
-    private void Update()
-    {
-
-    }
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         findHP();

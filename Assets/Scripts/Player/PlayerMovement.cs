@@ -1,21 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Animator))]
-public class Scripts : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     public float speed;
     private Vector3 direction;
-    private Animator animator;
-
-    private void Start()
-    {
- 
-    }
-
 
     void Update()
     {

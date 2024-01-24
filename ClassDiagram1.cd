@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="Enemy">
+    <Position X="5" Y="10.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>IAIABABAAAAIACACAAAAAAAEAEQEAAABgAAAAAAAAEI=</HashCode>
+      <FileName>Assets\Scripts\Enemy\Enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemySO">
+    <Position X="17.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAgAAAAAAAAAAAAAIAAAAAAABAAIAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\EnemySO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemySpawner">
+    <Position X="7" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAACAAAQAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\EnemySpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bomb">
+    <Position X="0.5" Y="3.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAgAAAAAAAAAAAgAAAQAAAAAAAAgAAAAiAA=</HashCode>
+      <FileName>Assets\Scripts\Player\Projectiles\Bomb.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvilFirebolt">
+    <Position X="6.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\Projectiles\Evil Firebolt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Firebolt">
+    <Position X="3.75" Y="3.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Player\Projectiles\Firebolt.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projectile">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAEAAEAAAAAAAAAAQAAAAAAAAAACEA=</HashCode>
+      <FileName>Assets\Scripts\Player\Projectiles\Projectile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WandRotation">
+    <Position X="15.5" Y="5.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAgAAQAAAAAAAEBAAAAAQAQAQAQAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\Player\Wand\WandRotation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerMovement">
+    <Position X="15.5" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>BAQAQAAAAAAAIAAABAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WandSwitch">
+    <Position X="17.5" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACACAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\WandSwitch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Destroyer">
+    <Position X="7.75" Y="9.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\RoomsGen\Destroyer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoomTemplates">
+    <Position X="7.75" Y="7.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>EAQAAIAAAAAAAAAAAAAAAAACAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\RoomsGen\Room Templates.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RoomSpawner">
+    <Position X="5" Y="7.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>gACAAIAAACAAAAAAAAECAAABAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\RoomsGen\RoomSpawner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraFollow">
+    <Position X="15.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\System\CameraFollow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameData">
+    <Position X="10" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAIJAggAgCAACAAQIAQEAQAAAQAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\System\GameData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DamageReceiver">
+    <Position X="12.5" Y="5.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACACAAAAAAAAAEAAAAAAAAAAAAAAAEI=</HashCode>
+      <FileName>Assets\Scripts\System\PlayerDamageReceiver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectPooling">
+    <Position X="18.5" Y="5.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAEgAAAAAAQAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\System\ObjectPooling.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameManager">
+    <Position X="0.5" Y="9.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAhACAAAEEAAIVAiAAAACAAAAAAgAAAAACAICAABAEA=</HashCode>
+      <FileName>Assets\Scripts\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Singleton&lt;T&gt;">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Singleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

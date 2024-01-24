@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Firebolt : Projectile
 {
-
     protected override void OnEnable()
     {
         base.OnEnable();
@@ -21,7 +20,7 @@ public class Firebolt : Projectile
             var enemydamaged = collision.gameObject.GetComponent<Enemy>();
             if (enemydamaged != null)
             {
-                enemydamaged.ApplyDamage(damage);
+                enemydamaged.ApplyDamage(damage); //damages enemy
                 gameObject.SetActive(false);
             }
 

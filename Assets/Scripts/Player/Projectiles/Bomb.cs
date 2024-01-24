@@ -16,7 +16,7 @@ public class Bomb : Projectile
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Firebolt"))
+        if (collision.gameObject.CompareTag("Firebolt")) //bomb explodes twice as potent if shot
         {
             Explode(radius*2);
             gameObject.SetActive(false);
@@ -32,9 +32,9 @@ public class Bomb : Projectile
     void Explode(float range)
     {
         var particleSystemInstance = Instantiate(particleSystemPrefab, transform.position, Quaternion.identity);
-        Destroy(particleSystemInstance, 3f);
+        Destroy(particleSystemInstance, 3f); //Destroys the particle system after 3 seconds
 
-        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, range);
+        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, range); //creates the bomb hitbox and puts them in an array
         foreach (var hitCollider in hitColliders)
         {
             if (hitCollider.CompareTag("Player"))

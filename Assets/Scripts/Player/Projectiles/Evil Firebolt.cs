@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class EvilFirebolt : Projectile
 {
-
-
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Walls"))
@@ -15,7 +13,7 @@ public class EvilFirebolt : Projectile
         }
         else if (other.CompareTag("Player"))
         {
-            var player = other.GetComponent<DamageReceiver>();
+            var player = other.GetComponent<DamageReceiver>(); //applies damage to player
             if (player != null)
             {
                 player.ApplyDamage(damage);

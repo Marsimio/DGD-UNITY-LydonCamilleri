@@ -11,15 +11,10 @@ public class WandRotation : MonoBehaviour
     public ObjectPooling objectPool;
     public GameObject wandTip;
 
-    void Start()
-    {
-    }
-
     private void OnEnable()
     {
         StartCoroutine(SwapDelay());
     }
-
 
     void Update()
     {

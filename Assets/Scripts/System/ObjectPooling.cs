@@ -5,15 +5,9 @@ using UnityEngine.Pool;
 
 public class ObjectPooling : MonoBehaviour
 {
-    //public static ObjectPool SharedInstance;
     public List<GameObject> pooledObjects;
     public GameObject objectToPool;
     public int amountToPool;
-
-    void Awake()
-    {
-        //SharedInstance = this;
-    }
 
     void Start()
     {
@@ -32,7 +26,6 @@ public class ObjectPooling : MonoBehaviour
     {
         for (int i = 0; i < amountToPool; i++)
         {
-            //will find objects which are not active
             if (!pooledObjects[i].activeInHierarchy)
             {
                 return pooledObjects[i];

@@ -12,7 +12,6 @@ public class Singleton<T> : MonoBehaviour where T : Component{
         {
             if (_instance == null && FindObjectOfType<T>() == null)
             {
-                //With this, it is not mandatory for Singleton to manually be placed in the scene
                 GameObject o = new GameObject();
                 o.name = typeof(T).Name;
                 _instance = o.AddComponent<T>();

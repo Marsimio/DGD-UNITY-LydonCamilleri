@@ -10,7 +10,6 @@ public class WandSwitch : MonoBehaviour
         SwitchWand();
     }
 
-    // Update is called once per frame
     void Update()
     {
         int tempWand = currentWand;
