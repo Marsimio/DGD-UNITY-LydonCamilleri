@@ -13,7 +13,7 @@ public class Scripts : MonoBehaviour
 
     private void Start()
     {
-        GameManager.Instance.findHP();
+ 
     }
 
 

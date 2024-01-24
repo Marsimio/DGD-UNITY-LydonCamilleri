@@ -15,10 +15,13 @@ public class DamageReceiver : MonoBehaviour
 
     public void ApplyDamage(int damage)
     {
-        GameData.PlayerHealth -= damage;
+        if (GameData.PlayerHealth > 0)
+        {
+            GameData.PlayerHealth -= damage;
+            spriteRenderer.color = Color.red;
+            StartCoroutine(ResetColor());
+        }
         GameManager.Instance.PlayerDamage();
-        spriteRenderer.color = Color.red;
-        StartCoroutine(ResetColor());
     }
 
     private IEnumerator ResetColor()

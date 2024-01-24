@@ -18,10 +18,19 @@ public class GameManager : Singleton<GameManager>
     {
         base.Awake();
         MaintainOne();
-        AddButtonEventListeners();
+        AddListeners();
+        SceneManager.sceneLoaded += OnSceneLoaded;
 
     }
 
+    private void Update()
+    {
+
+    }
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        findHP();
+    }
 
     private void MaintainOne()
     {
@@ -37,7 +46,7 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    private void AddButtonEventListeners()
+    private void AddListeners()
     {
         if (easyButton != null)
             easyButton.onClick.AddListener(() => {
@@ -66,7 +75,6 @@ public class GameManager : Singleton<GameManager>
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
-        
     }
     public void findHP()
     {
@@ -78,7 +86,7 @@ public class GameManager : Singleton<GameManager>
         }
         else
         {
-            Debug.Log("HP GameObject not found in Level 1 scene.");
+            Debug.Log("HP GameObject not found in scene.");
         }
     }
 
@@ -108,6 +116,14 @@ public class GameManager : Singleton<GameManager>
     }
     public void PlayerDamage()
     {
-        healthText.text = "Health: " + GameData.PlayerHealth.ToString();
+        if (GameData.PlayerHealth <= 0 && SceneManager.GetActiveScene().name != "Game End")
+        {
+            LoadScene("Game End");
+        }
+        else
+        {
+            healthText.text = "Health: " + GameData.PlayerHealth.ToString();
+        }
+
     }
 }
